@@ -6,9 +6,9 @@ var app = app || {};
   const bookView = {};
 
   bookView.initIndexPage = function () {
-    $('.error-view-container').hide();
+    $('.container').hide();
     $('#books').show();
-    app.Books.all.map(book => $('#books').append(Book.toHtml()));
+    app.Books.all.map(book => $('#books').append(book.toHtml()));
   };
 
   bookView.handleMainNav = () => {
@@ -16,11 +16,9 @@ var app = app || {};
       $('.tab-content').hide();
       $(`#${$(this).data('content')}`).fadeIn(200);
     });
-  
     $('.main-nav .tab:first').click();
   };
-
-  module.taskView = taskView;
+  module.bookView = bookView;
 })(app);
 
 $(function () {
