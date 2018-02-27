@@ -4,9 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/modules.css">
+  <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+  <script id="book-template" type="text/x-handlebars-template">
+    <article class="clearfix">
+        <h1>{{title}}</h1>
+        <ul>
+        <li class="book-info">Author: {{author}} </li>
+        <li class="book-info">ISBN: {{ISBN}} </li>
+        <li class="book-info"><img src="{{img_url}}"/></li>
+        <li class="book-info"><p>Summary: {{description}}</p></li> 
+        </ul>
+    </article>
+  </script>
+  <title>Lab 11 - Book App</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <h1>Lab 11 - homepage GET:/api/v1/books</h1>
+  <header>Books App</header>
+  <h1></h1>
+  <section id="books"></section>
+  <section class="error-view container">
+      <h3>Something went wrong</h3>
+      <section id="error-message"></section>
+    </section>
+  <footer>Follow Us!</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+  
 </body>
 </html>
