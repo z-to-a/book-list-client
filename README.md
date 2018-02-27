@@ -17,7 +17,7 @@
 2/26/2018 
 4:00pm- Set up basic file structure
 2/27/2018
-12:25- We set up javascript librarys including jQuery and handlebars, also wrote basic structure for index.html and got navigation icons from iconmoon,
+12:25- We set up javascript librarys including jQuery and handlebars, also wrote basic structure for index.html and got navigation icons from iconmoon.
 
 
 ## Credits and Collaborations
