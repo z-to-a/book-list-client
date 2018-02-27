@@ -21,7 +21,8 @@
 
 
 ## Credits and Collaborations
-Thanks to our Instructers and TAs!
-For Fonts:
-https://icomoon.io/
-And Austin Matteson
+* Thanks to our Instructers and TAs!
+* For special navigation fonts:https://icomoon.io/
+* Special thanks to our classmate,Austin Matteson.
+* Normalize.css v3.0.2 | MIT License | git.io/normalize
+* Colorhexa.com for color values
