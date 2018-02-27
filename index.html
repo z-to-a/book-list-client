@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/modules.css">
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="vendor/styles/icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Indie+Flower" rel="stylesheet">
   <script id="book-template" type="text/x-handlebars-template">
     <article class="clearfix">
         <h1>{{title}}</h1>
@@ -23,16 +25,55 @@
 <body>
   <h1>Lab 11 - homepage GET:/api/v1/books</h1>
   <header>Books App</header>
+  <nav class="main-nav">
+  <div class="icon-menu"></div>
+  <ul>
+    <li class="tab" data-content="books"><a href="#" class="icon-books"> Home</a></li>
+    <li class="tab" data-content="about"><a href="#" class="icon-book"> About</a></li>
+  </ul>
+  </nav>
   <h1></h1>
-  <section id="books"></section>
-  <section class="error-view container">
-      <h3>Something went wrong</h3>
-      <section id="error-message"></section>
-    </section>
-  <footer>Follow Us!</footer>
+  <section id="books" class="tab-content"></section>
+  <section id="about" class="tab-content">
+    <h1>About</h1>
+    <h2>The My Book App</h2>
+    <ul>
+      <li>A place to review a library of books</li>
+      <li>Soon to offer features like keeping your own library where you may add and delete books</li>
+      <li>Designed for mobile-only</li>
+      <li>Best viewed on Chrome</li>
+    </ul>
+    <h2>The My Book App Team</h2>
+    <p><strong>Rebecca Prows</strong> is a Python developer.</p>
+     <p>Learn more about her professional experience  <a class="icon-linkedin"href="https://www.linkedin.com/in/rebeccaprows/">here</a>.
+     </p>
+     <p>See her some of her latest projects  <a class="icon-github" href="https://github.com/RebeccaJ21">here</a>.
+     </p>
+     <p><strong>Suzanne Richman</strong> is a fullstack JavaScript developer.</p>
+     <p>Learn more about her professional experience  <a class="icon-linkedin"href="https://www.linkedin.com/in/suzannerichman/">here</a>.
+     </p>
+     <p>See her some of her latest projects  <a class="icon-github" href="https://github.com/FavoredFortune">here</a>.
+     </p>
+  </section>
+  <section class="error-view-container">
+    <h3>Something went wrong</h3>
+    <section id="error-message"></section>
+  </section>
+  
+  <footer>
+    <ul>Follow Our team
+      <li><a class="icon-github" href="https://github.com/RebeccaJ21">Rebecca Prows </a></li>
+      <li><a class="icon-github" href="https://github.com/FavoredFortune">Suzanne Richman</a></li>
+    </ul>
+  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+  <script src="scripts/book.js"></script>
+  <script src="scripts/bookView.js"></script>
+  <script>
+    Book.fetchAll(bookView.initIndexPage);
+  </script>
   
 </body>
 </html>
