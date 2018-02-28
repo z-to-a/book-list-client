@@ -2,14 +2,14 @@
 var app = app || {};
 
 (function (module) {
+  const errorView = {};
+
   errorView.initErrorPage = function () {
     $('.container').hide();
     $('.error-view').show();
-    app.Books.all.map(book => $('#books').append(book.toHtml()));
+    $('#error-message').empty();
+    let template = Handlebars.compile($('#error-template').text());
+    $('#error-message').append(template(err));
   };
   module.errorView = errorView;
 })(app);
-
-$(function () {
-  app.Book.fetchAll(app.bookView.initIndexPage);
-});
