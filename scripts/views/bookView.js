@@ -8,7 +8,7 @@ var app = app || {};
   bookView.initIndexPage = function () {
     $('.container').hide();
     $('#books').show();
-    app.Books.all.map(book => $('#books').append(book.toHtml()));
+    app.Book.all.map(book => $('#books').append(book.toHtml()));
   };
 
   bookView.handleMainNav = () => {

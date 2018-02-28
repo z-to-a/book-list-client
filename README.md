@@ -2,7 +2,7 @@
 
 **Authors**: Rebecca Prows and Suzanne Richman 
 
-**Version**: 1.0.1
+**Version**: 1.0.2
 
 ## Overview
 
@@ -18,6 +18,9 @@
 4:00pm- Set up basic file structure
 2/27/2018
 12:25- We set up javascript librarys including jQuery and handlebars, also wrote basic structure for index.html and got navigation icons from iconmoon.
+2/28/2018
+9:00am-Updated from class discusson 
+9:30am- Upddated file structure  
 
 
 ## Credits and Collaborations
