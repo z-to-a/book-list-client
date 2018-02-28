@@ -1,0 +1,37 @@
+[
+  {
+    "title":"Programming Pearls",
+    "author":"Jon L. Bentley and Patrick Chan",
+    "ISBN":"ISBN_13 0785342657883",
+    "image_url":"https://images.gr-assets.com/books/1385191091l/52084.jpg",
+    "description":"The book is filled with lucid and witty descriptions of practical programming techniques and fundamental design principles. It is not at all surprising that Programming Pearls has been so highly valued by programmers at every level of experience."
+  },
+  {
+    "title":"The Book Thief",
+    "author":"Markus Zusak",
+    "ISBN":"ISBN_13 978-0375842207",
+    "image_url":"https://images.gr-assets.com/books/1390053681l/19063.jpg",
+    "description":"Narrated by Death, The Book Thief is the story of Liesel Meminger, a nine-year-old German girl who given up by her mother to live with Hans and Rosa Hubermann in the small town of Molching in 1939, shortly before World War II"
+    },
+    {
+      "title": "Dune",
+      "author":"Frank Herbert",
+      "ISBN":"ISBN_13 9780441013593",
+      "image_url":"http://books.google.com/books/content?id=B1hSG45JCX4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "description":"Follows the adventures of Paul Atreides, the son of a betrayed duke given up for dead on a treacherous desert planet and adopted by its fierce, nomadic people, who help him unravel his most unexpected destiny." 
+    },
+    {
+      "title":"Introduction to Algorithms",
+      "author":"Thomas H. Cormen",
+      "ISBN": "ISBN13: 9780262033848",
+      "image_url":"'https://images.gr-assets.com/books/1390459484l/6752187.jpg",
+      "description":"Some books on algorithms are rigorous but incomplete; others cover masses of material but lack rigor. Introduction to Algorithms uniquely combines rigor and comprehensiveness. The book covers a broad range of algorithms in depth, yet makes their design and analysis accessible to all levels of readers. Each chapter is relatively self-contained and can be used as a unit of study. The algorithms are described in English and in a pseudocode designed to be readable by anyone who has done a little programming. The explanations have been kept elementary without sacrificing depth of coverage or mathematical rigor."
+    },
+    {
+      "title":"Structure and Interpretation of Computer Programs", "author":"Harold Abelson", 
+      "ISBN":"ISBN13: 9780262011532",
+      "image_url":"https://images.gr-assets.com/books/1347571961l/777411.jpg",
+      "description": "Structure and Interpretation of Computer Programs has had a dramatic impact on computer science curricula over the past decade. This long-awaited revision contains changes throughout the text. There are new implementations of most of the major programming systems in the book, including the interpreters and compilers, and the authors have incorporated many small changes that reflect their experience teaching the course at MIT since the first edition was published. A new theme has been introduced that emphasizes the central role played by different approaches to dealing with time in computational models: objects with state, concurrent programming, functional programming and lazy evaluation, and nondeterministic programming. There are new example sections on higher-order procedures in graphics and on applications of stream processing in numerical programming, and many new exercises. In addition, all the programs have been reworked to run in any Scheme implementation that adheres to the IEEE standard."
+    }
+
+]
