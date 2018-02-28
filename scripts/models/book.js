@@ -29,7 +29,16 @@ var __API_URL__ = 'http://localhost:3000';
       .then(callback)
       .catch(errorCallback);
   }
+  Book.loadOne = title => { 
+    Book.all.title = Book.all.filter('SELECT from BOOKS ON title;').map(book => new Book(book));
 
+  }
+  Book.fetchOne = callback =>{
+    $.get(`${__API_URL__}/:title`)
+      .then(Book.loadOne)
+      .then(callback)
+      .catch(errorCallback);
+  }
   Book.createBook = book => {
   //TODO MAKE an AJAX request to create a new task, redirect to home page and handle errors.
     $.post(`${__API_URL__}/books/add`,book)
