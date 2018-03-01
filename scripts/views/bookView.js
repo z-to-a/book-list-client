@@ -6,10 +6,13 @@ var app = app || {};
   const bookView = {};
 
   function resetView(){
-    // @252PM
+    $('.container').hide();
+    $('.nav-menu').slideUp(250);
   }
 
   bookView.initIndexPage = function () {
+    console.log('initIndex triggered')
+    resetView();
     $('.container').hide();
     $('#books').show();
     app.Book.all.map(book => $('#books').append(book.toHtml()));
@@ -17,37 +20,34 @@ var app = app || {};
 
   bookView.initDetailPage = function (ctx) {
     resetView();
-    //at 251 in lecture
-    // compile handlebars template for detail view
-  //   $('.detail-view').show();
-  //   $('.detail-view-container').hide();
-  //   $('#books').show();
-  //   app.Book.all.map(book => $('#books').append(book.toHtml()));
-  // };
+    $('.detail-view').show();
+    $('.book-detail').empty();
+    let template = Handlebars.compile($('#book-detail-template').text());
+    $('.book-detail').append(template(ctx));
+  };
 
   bookView.initFormPage = function () {
-    $('.container').hide();
-    $('.formView').show();
-
-    let createBook={
-      //take values from the form and add assign them to key value pairs
-    };
-
-
-    module.Book.createBook(createBook)
-  //   app.Book.all.map(book => $('#books').append(book.toHtml()));
-  // };
+    resetView();
+    $('.create-view').show();
+    $('#create-form').on('submit', function(event){
+      event.preventDefault();
+      let createBook={
+        title: event.target.title.value,
+        author: event.target.author.value,
+        isbn: event.target.isbn.value,
+        image_url: event.target.image_url.value,
+        description: event.target.description.value
+      };
+      module.Book.createBook(createBook);
+    })
+  };
 
   bookView.handleMainNav = () => {
     $('.main-nav').on('click', '.tab', function() {
-      $('.tab-content').hide();
-      $(`#${$(this).data('content')}`).fadeIn(200);
+      $('.container').hide();
+      $(`#${$(this).data('container')}`).fadeIn(200);
     });
     $('.main-nav .tab:first').click();
   };
   module.bookView = bookView;
 })(app);
-
-$(function () {
-  app.Book.fetchAll(app.bookView.initIndexPage);
-});

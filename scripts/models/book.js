@@ -3,7 +3,7 @@
 var app = app || {};
 var __API_URL__ = 'http://localhost:3000';
 
-(function (module){
+(function(module){
   function errorCallback(err) {
     console.error(err);
     module.errorView.initErrorPage(err);
@@ -27,6 +27,7 @@ var __API_URL__ = 'http://localhost:3000';
   Book.fetchAll = callback =>
     $.get(`${__API_URL__}/api/v1/books`)
       .then(Book.loadAll)
+      .then(console.log('fetchAll triggered'))
       .then(callback)
       .catch(errorCallback);
 

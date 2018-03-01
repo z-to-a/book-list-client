@@ -29,25 +29,25 @@
       </div>
     </script>
 
-
+     <!-- This is the template for admin views -->
     <!-- This is the template for a single book detail -->
-    <!-- <script id="book-detail-template" type="text/x-handlebars-template">
-      <li class = "book-items" data-bookid={{book_id}}></li>
+    <script id="book-detail-template" type="text/x-handlebars-template">
+      <li class = "book-detail" data-bookid={{book_id}}></li>
       <div class="book-container">
           <h2 class ="view-title">{{title}}</h1>
           <ul id="book-list">
           <li class="book-info">Author: {{author}} </li>
           <li class="book-info"> {{isbn}} </li>
           <li class="book-info"><img src="{{image_url}}"></li>
-          <p class ="detail-button"><a href="/books/{{book_id}}">See details</a></p>
+          <li class="book-info"> {{description}} </li>
           </ul>
       </div>
-    </script> -->
+    </script>
     <title>Lab 11 - Book App</title>
   </head>
   <body>
     <header> Books App</header>
-    <nav class="main-nav">
+    <nav class="main-nav nav-menu">
     <div class="icon-menu"></div>
     <ul>
       <li class="tab" data-content="books"><a href="#" class="icon-books"> Home</a></li>
@@ -57,9 +57,24 @@
     </nav>
     <h1></h1>
     <section id="books" class="book-view container"><a href="/">Books</a></section>
-    <section id="add-books" class="add-view container">
+    <section id="books" class="detail-view container"><a href="/detail">Book detail</a></section>
+    <section id="create-form" class="create-view container">
+      Add a new book
       <form id ="add-form" action="add-form">
-
+      <label>
+        <input type="text" id="book-title" placeholder=" Book title" required>
+      </label>
+      <label>
+          <input type="text" id="author" placeholder="Author" required>
+        </label>
+        <label>
+          <input type="text" id="isbn" placeholder="ISBN" required>
+        </label>
+        <label>
+            <input type="text" id="image_url" placeholder="URL of book image" required>
+          </label>
+        <textarea id="description" rows="3" cols="30" required></textarea>
+        <button type="submit">Submit and return to the home page</button>
       </form>
     </section>
     <section id="about" class="about container">
@@ -87,7 +102,7 @@
       <h3>Something went wrong</h3>
     <section id="error-message"></section>
     </section>
-    <section class="admin-view-container">
+    <section class="admin-view container">
       <!-- //Part 2 lecture 3:25pm -->
     </section>
     <footer>
@@ -98,10 +113,14 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+   
     <script src="./scripts/models/book.js" type="text/javascript"></script>
     <script src="./scripts/views/bookView.js" type="text/javascript"></script>
+    
     <!-- <script src="./scripts/views/adminView.js" type="text/javascript"></script> -->
     <script src="./scripts/views/errorView.js" type="text/javascript"></script>
+    <script src="./scripts/views/routes.js" type="text/javascript"></script>
   </body>
 </html>
