@@ -2,7 +2,7 @@
 
 **Authors**: Rebecca Prows and Suzanne Richman 
 
-**Version**: 1.0.2
+**Version**: 1.0.3
 
 ## Overview
 
@@ -21,6 +21,9 @@
 2/28/2018
 9:00am-Updated from class discusson 
 9:30am- Upddated file structure  
+3/1/2018
+9:00 am - Updated from prior day's class lecture
+12:00 pm - Updated routes.js, added handlebar templates to index and created/corrected functions on bookView.js books.js.
 
 
 ## Credits and Collaborations
