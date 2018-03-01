@@ -19,6 +19,7 @@ var app = app || {};
   };
 
   bookView.initDetailPage = function (ctx) {
+    console.log('initDetailPage triggered')
     resetView();
     $('.detail-view').show();
     $('.book-detail').empty();
