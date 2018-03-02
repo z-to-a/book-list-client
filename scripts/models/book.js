@@ -3,7 +3,7 @@
 var app = app || {};
 var __API_URL__ = 'http://localhost:3000';
 
-(function(module){
+(function(module) {
   function errorCallback(err) {
     console.error(err);
     module.errorView.initErrorPage(err);
@@ -27,12 +27,11 @@ var __API_URL__ = 'http://localhost:3000';
   Book.fetchAll = callback =>
     $.get(`${__API_URL__}/api/v1/books`)
       .then(Book.loadAll)
-      .then(console.log('fetchAll triggered'))
       .then(callback)
       .catch(errorCallback);
 
   Book.fetchOne = (ctx, callback) =>
-    $.get(`${__API_URL__}/api/v1/books${ctx.params.book_id}`)
+    $.get(`${__API_URL__}/api/v1/books/${ctx.params.book_id}`)
       .then(results => ctx.book = results[0])
       // .then(console.log(ctx.book))
       .then(callback)
@@ -40,7 +39,7 @@ var __API_URL__ = 'http://localhost:3000';
 
   Book.createBook = book =>
   // This is an AJAX request to create a new task, redirect to home page and handle errors.
-    $.post(`${__API_URL__}/api/v1/books`,book)
+    $.post(`${__API_URL__}/api/v1/books`, book)
       .then(()=> page('/'))
       .catch(errorCallback);
 

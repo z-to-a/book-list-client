@@ -18,13 +18,14 @@ var app = app || {};
     app.Book.all.map(book => $('#books').append(book.toHtml()));
   };
 
-  bookView.initDetailPage = function (ctx) {
+  bookView.initDetailPage = function (ctx, next) {
     console.log('initDetailPage triggered')
     resetView();
     $('.detail-view').show();
     $('.book-detail').empty();
     let template = Handlebars.compile($('#book-detail-template').text());
-    $('.book-detail').append(template(ctx));
+    $('.book-detail').append(template(ctx.book));
+    // $('.book-items').hide();
   };
 
   bookView.initFormPage = function () {

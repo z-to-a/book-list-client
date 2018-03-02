@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules/book-main.css">
     <link rel="stylesheet" href="styles/modules/detail-main.css">
-    <link rel="stylesheet" href="styles/modules/error-main.css">
+    <link rel="stylesheet" href="styles/modules/error.css">
     <link rel="stylesheet" href="styles/modules/footer.css">
     <link rel="stylesheet" href="styles/modules/form-main.css">
     <link rel="stylesheet" href="styles/modules/header.css">
@@ -40,15 +40,15 @@
      <!-- This is the template for admin views -->
     <!-- This is the template for a single book detail -->
     <script id="book-detail-template" type="text/x-handlebars-template">
-      <li class = "book-detail" data-book id={{book_id}}></li>
       <div class="book-container">
-          <h2 class ="view-title">{{title}}</h1>
-          <ul id="book-list">
-          <li class="book-info">Author: {{author}} </li>
-          <li class="book-info"> {{isbn}} </li>
-          <li class="book-info"><img src="{{image_url}}"></li>
-          <li class="book-info"> {{description}} </li>
-          </ul>
+        <h3>{{title}}</h3>
+        <div class="book-details">
+          <ul>
+            <li class="book-info">Author: {{author}} </li>
+            <li class="book-info"> {{isbn}} </li>
+            <li class="book-info"><img src="{{image_url}}"></li>
+            <li class="book-info"> {{description}} </li></ul>
+        </div>
       </div>
     </script>
     <title>Lab 11 - Book App</title>
@@ -64,8 +64,13 @@
     </ul>
     </nav>
     <h1></h1>
-    <section id="books" class="book-view container"><a href="/">Books</a></section>
-    <section id="books" class="detail-view container"><a href="/detail">Book detail</a></section>
+    <section id="books" class="book-view container"><a href="/">Books</a>
+    <section id="book-detail"></section>
+    </section>
+    <section id="books" class="detail-view container">
+      <a href="/detail">Book detail</a>
+      <section class="book-detail"> </section>
+    </section>
     <section id="create-form" class="create-view container">
       Add a new book
       <form id ="add-form" action="add-form">
