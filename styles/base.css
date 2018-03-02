@@ -1,0 +1,46 @@
+*{
+  font-family: 'Dosis', sans-serif;
+  background: #0483ff;
+  color: white;
+  }
+  body{
+  
+  }
+  img {
+    max-width: 100%;
+    margin: 1vw;
+  }
+  
+  body {
+    line-height: 1.5;
+    font-size: 100%;
+    color: #313131;
+  }
+  
+  main {
+    margin: 0 20px;
+  }
+
+  h1 {
+    margin: 0.37vh 0;
+   }
+
+  p {
+    font-size: 1em;
+  }
+
+  li{
+  list-style-type: none;
+  display: block;
+  }
+  a, a:link, a:active {
+    text-decoration: none;
+    color: #ff8004;
+  }
+  
+  a:hover, a:focus {
+    color: #29506D;
+  }
+  
+
+     

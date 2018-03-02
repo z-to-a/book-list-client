@@ -1,0 +1,55 @@
+header {
+  background: darkblue;
+  height: 10vh;
+  width: 100%;
+  font-size: 5vh;
+  text-align: center;
+  padding: 3vh;
+}
+
+
+.icon-menu {
+  background: darkblue;
+  font-size: 3em;
+  float: right;
+  position: absolute;
+}
+
+.main-nav {
+  padding: 0.1em;
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  background: darkblue;
+}
+
+nav {
+  font-size: 1.5em;
+  background: darkblue;
+ }
+ 
+ nav ul {
+  list-style-type: none;
+  padding: 0 4px 0 0;
+  background: darkblue;
+ }
+ 
+ nav li {
+  padding: .75em 0 0.75em 4px;
+  border-bottom: 1px solid white;
+ }
+ 

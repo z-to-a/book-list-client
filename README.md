@@ -24,6 +24,8 @@
 3/1/2018
 9:00 am - Updated from prior day's class lecture
 12:00 pm - Updated routes.js, added handlebar templates to index and created/corrected functions on bookView.js books.js.
+3/2/2018
+9:40 am updated css, icons font and html
 
 
 ## Credits and Collaborations
