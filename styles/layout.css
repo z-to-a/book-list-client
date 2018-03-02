@@ -1,0 +1,46 @@
+main {
+  margin: 20px;
+}
+  
+.icon-menu {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  font-size: 2.75em;
+}
+
+.icon-menu + ul {
+  display: none;
+}
+
+.icon-menu:hover + ul {
+  display: block;
+}
+
+.heading-group-h1 {
+  padding: 10px 20px 0;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+ul li{
+  margin-left: 2vw;
+}
+
+
+img {
+  margin: 15px;
+  width: 70%;
+}
+
+.clearfix:after {
+  content: “”;
+  display: table;
+  clear: both;
+}
+
+#about {
+  margin-top: 15px;
+}

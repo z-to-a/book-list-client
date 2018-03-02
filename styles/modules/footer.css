@@ -1,0 +1,15 @@
+footer {
+  text-align: left;
+  padding: 3vh;
+  font-size: 1em;
+  color: #ff6200;
+  background: darkblue;
+}
+
+.footer ul{
+  background: darkblue;
+}
+
+.footer ul li{
+  background: darkblue;
+}
