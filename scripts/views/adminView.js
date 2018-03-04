@@ -4,7 +4,7 @@ var app = app || {};
 const __API_URL__ = 'http://localhost:3000';
 
 (function (module){
-  const adminView = [];
+  const adminView = {};
 
 adminView.initAdminPage = function(){
   $('#admin-form').on('submit', function(event){
@@ -34,4 +34,4 @@ adminView.initAdminPage = function(){
 
 
   module.adminView = adminView;
-})(app)
+})(app);

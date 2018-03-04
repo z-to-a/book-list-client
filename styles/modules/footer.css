@@ -1,13 +1,16 @@
 footer {
   text-align: left;
-  padding: 3vh;
   font-size: 1em;
   color: #ff6200;
   background: darkblue;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .footer ul{
   background: darkblue;
+  padding: 1vh;
 }
 
 .footer ul li{
