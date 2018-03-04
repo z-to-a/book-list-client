@@ -3,6 +3,10 @@
 var app = app || {};
 
 (function (module) {
+  $('.icon-menu').on('click', function(event) {
+    $('.nav-menu').slideToggle(350);
+  });
+
   const bookView = {};
 
   function resetView(){
@@ -10,22 +14,20 @@ var app = app || {};
     $('.nav-menu').slideUp(250);
   }
 
-  bookView.initIndexPage = function () {
-    console.log('initIndex triggered')
+  bookView.initIndexPage = function (ctx) {
     resetView();
-    $('.container').hide();
-    $('#books').show();
-    app.Book.all.map(book => $('#books').append(book.toHtml()));
+    $('.book-view').show();
+    $('#book-list').empty();
+    module.Book.all.map(book => $('#book-list').append(book.toHtml()));
   };
 
-  bookView.initDetailPage = function (ctx, next) {
-    console.log('initDetailPage triggered')
+  bookView.initDetailPage = function (ctx) {
     resetView();
     $('.detail-view').show();
     $('.book-detail').empty();
     let template = Handlebars.compile($('#book-detail-template').text());
     $('.book-detail').append(template(ctx.book));
-    // $('.book-items').hide();
+    $('.about').hide();
   };
 
   bookView.initFormPage = function () {
@@ -33,23 +35,16 @@ var app = app || {};
     $('.create-view').show();
     $('#create-form').on('submit', function(event){
       event.preventDefault();
-      let createBook={
+      let book={
         title: event.target.title.value,
         author: event.target.author.value,
         isbn: event.target.isbn.value,
         image_url: event.target.image_url.value,
         description: event.target.description.value
       };
-      module.Book.createBook(createBook);
+      module.Book.createBook(book);
     })
   };
 
-  bookView.handleMainNav = () => {
-    $('.main-nav').on('click', '.tab', function() {
-      $('.container').hide();
-      $(`#${$(this).data('container')}`).fadeIn(200);
-    });
-    $('.main-nav .tab:first').click();
-  };
   module.bookView = bookView;
 })(app);

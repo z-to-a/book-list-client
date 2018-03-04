@@ -7,112 +7,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules/error.css">
+    <link rel="stylesheet" href="styles/modules/header.css">
     <link rel="stylesheet" href="styles/modules/book-main.css">
     <link rel="stylesheet" href="styles/modules/detail-main.css">
-    <link rel="stylesheet" href="styles/modules/error.css">
-    <link rel="stylesheet" href="styles/modules/footer.css">
     <link rel="stylesheet" href="styles/modules/form-main.css">
-    <link rel="stylesheet" href="styles/modules/header.css">
-    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/modules/footer.css"> 
     <link href="https://fonts.googleapis.com/css?family=Dosis|Indie+Flower" rel="stylesheet">
 
     <!-- This is the template for error messages -->
     <script id="error-template" type="text/x-handlebars-template">
-        <p>{{status}}: {{statusText}}</p>
+      <p> Please return to the home page to start again.</p> 
+      <p>{{status}}: {{statusText}}</p>
     </script>
 
     <!-- This is the template for all books to display -->
     <script id="book-template" type="text/x-handlebars-template">
-      <div class = "book-items" data-bookid={{book_id}}></div>
-      <div class="book-container">
-          <h2 class ="view-title">{{title}}</h1>
-          <ul id="book-list">
-          <li class="book-info">Author: {{author}} </li>
-          <li class="book-info"> {{isbn}} </li>
-          <li class="book-info"><img src="{{image_url}}"></li>
-          <p class ="detail-button"><a href="/books/{{book_id}}">See details</a></p>
-          </ul>
+      <div class = "book-items" data-bookid={{book_id}}>
+        <div class="book-container">
+            <h2 class ="view-title">{{title}}</h1>
+            <ul id="book-list">
+            <li class="book-info"><img src="{{image_url}}"></li>
+            <li class="book-info">Author: {{author}} </li>
+            <li class="book-info"> {{isbn}} </li>
+            <p class ="detail-button"><a href="/books/{{book_id}}">See details</a></p>
+            </ul>
+        </div>
       </div>
     </script>
 
-     <!-- This is the template for admin views -->
+     <!-- This will be the template for admin views -->
     <!-- This is the template for a single book detail -->
     <script id="book-detail-template" type="text/x-handlebars-template">
       <div class="book-container">
         <h3>{{title}}</h3>
-        <div class="book-details">
-          <ul>
-            <li class="book-info">Author: {{author}} </li>
+          <ul class="book-details">
+            <li class="book-info"><img src="{{image_url}}"></li><li class="book-info">{{author}} </li>
             <li class="book-info"> {{isbn}} </li>
-            <li class="book-info"><img src="{{image_url}}"></li>
             <li class="book-info"> {{description}} </li></ul>
         </div>
       </div>
     </script>
-    <title>Lab 11 - Book App</title>
+    <title>Your Books</title>
   </head>
   <body>
-    <header> Your Books </header>
-    <nav class="main-nav nav-menu">
-    <div class="icon-menu"></div>
-    <ul>
-      <li class="tab" data-content="books"><a href="#" class="icon-books"> Home</a></li>
-      <li class="tab" data-content="about"><a href="#" class="icon-book"> About</a></li>
-      <li class="tab" data-content="admin"><a href="#" class="icon-book"> Admin</a></li>
-    </ul>
-    </nav>
-    <h1></h1>
-    <section id="books" class="book-view container"><a href="/">Books</a>
-    <section id="book-detail"></section>
+    <header class="header-content"> 
+      <nav class="main-nav">
+        <h1>Your Books </h1>
+        <div class="icon-menu">
+          <ul class ="nav-menu">
+            <li class="tab" data-content="books"><a href="/" class="icon-home3"> Home</a></li>
+            <li class="tab" data-content="admin"><a href="/books/new" class="icon-folder-plus"> Add book</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="book-view container"><a href="/"></a>
+      <h2>Books</h2>
+      <section class="book-list">
+          <ul id="book-list"></ul>
+      </section>
     </section>
-    <section id="books" class="detail-view container">
-      <a href="/detail">Book detail</a>
-      <section class="book-detail"> </section>
+    <section  class="detail-view  container">
+      <section class="book-detail">
+          <h2>Book detail</h2>
+      </section>
     </section>
-    <section id="create-form" class="create-view container">
-      Add a new book
+    <section class="create-view container">
+      <h2>Add a new book</h2> <a href="/new"></a>
       <form id ="add-form" action="add-form">
-      <label>
+      <label> <p>Book Title</p>
         <input type="text" id="book-title" placeholder=" Book title" required>
       </label>
-      <label>
+      <label> <p>Author Name</p>
           <input type="text" id="author" placeholder="Author" required>
         </label>
-        <label>
+        <label> <p>ISBN</p>
           <input type="text" id="isbn" placeholder="ISBN" required>
         </label>
-        <label>
+        <label> <p>Image URL</p>
             <input type="text" id="image_url" placeholder="URL of book image" required>
-          </label>
+        </label>
+        <p>Description</p>
         <textarea id="description" rows="3" cols="30" required></textarea>
         <button type="submit">Submit and return to the home page</button>
       </form>
     </section>
-    <section id="about" class="about container">
-      <h1>About</h1>
-      <h2>The My Book App</h2>
-      <ul>
+    <section id="about" class="about">
+      <h2>About</h2>
+      <h3>The My Book App</h3>
+      <ul class="about-us">
         <li>A place to review a library of books</li>
         <li>Soon to offer features like keeping your own library where you may add and delete books</li>
         <li>Designed for mobile-only</li>
         <li>Best viewed on Chrome</li>
       </ul>
-      <h2>The My Book App Team</h2>
-      <p><strong>Rebecca Prows</strong> is a Python developer.</p>
-      <p>Learn more about her professional experience  <a class="icon-linkedin"href="https://www.linkedin.com/in/rebeccaprows/">here</a>.
-      </p>
-      <p>See her some of her latest projects  <a class="icon-github" href="https://github.com/RebeccaJ21">here</a>.
-      </p>
-      <p><strong>Suzanne Richman</strong> is a fullstack JavaScript developer.</p>
-      <p>Learn more about her professional experience  <a class="icon-linkedin"href="https://www.linkedin.com/in/suzannerichman/">here</a>.
-      </p>
-      <p>See her some of her latest projects  <a class="icon-github" href="https://github.com/FavoredFortune">here</a>.
-      </p>
+      <h3>The My Book App Team</h3>
+      <ul class="about-us"><strong>Rebecca Prows</strong> <li>Python developer</li>
+      <li><a class="icon-linkedin"href="https://www.linkedin.com/in/rebeccaprows/"></a>Learn more about her professional experience on LinkedIn</li>
+      <li><a class="icon-github" href="https://github.com/RebeccaJ21"></a>See her some of her latest projects on GitHub 
+      </li>
+      </ul>
+      <ul class="about-us"><strong>Suzanne Richman</strong> 
+      <li>Full-stack JavaScript developer</li>
+      <li> <a class="icon-linkedin"href="https://www.linkedin.com/in/suzannerichman/"></a>Learn more about her professional experience on LinkedIn
+      </li>
+      <li><a class="icon-github" href="https://github.com/FavoredFortune"></a>See her some of her latest projects on GitHub 
+      </li>
     </section>
     <section class="error-view container">
-      <h3>We're sorry, something went wrong. </h3> <p> Please return to the home page to start again.</p> 
+      <h3>We're sorry, something went wrong. </h3>
     <section id="error-message"></section>
     </section>
     <section class="admin-view container">
@@ -125,15 +132,13 @@
       </ul>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
    
     <script src="./scripts/models/book.js" type="text/javascript"></script>
     <script src="./scripts/views/bookView.js" type="text/javascript"></script>
-    
-    <!-- <script src="./scripts/views/adminView.js" type="text/javascript"></script> -->
     <script src="./scripts/views/errorView.js" type="text/javascript"></script>
+    <!-- <script src="./scripts/views/adminView.js" type="text/javascript"></script> -->
     <script src="./scripts/views/routes.js" type="text/javascript"></script>
   </body>
 </html>

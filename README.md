@@ -2,7 +2,7 @@
 
 **Authors**: Rebecca Prows and Suzanne Richman 
 
-**Version**: 1.0.4
+**Version**: 1.0.5 (author Suzanne Richman only for 1.0.5)
 
 ## Overview
 
@@ -26,7 +26,9 @@
 12:00 pm - Updated routes.js, added handlebar templates to index and created/corrected functions on bookView.js books.js.
 3/2/2018
 9:40 am updated css, icons font and html
-10:00am updated route.jss, init.detailPageView, html handlebars template, index.html, and the README.md
+10:00am updated route.js, init.detailPageView, html handlebars template, index.html, and the README.md
+3/3/2018
+9:06 pm updated all css files (except icons), route.js, bookView.js, book.js, index.html and readme. 
 
 ## Credits and Collaborations
 * Thanks to our Instructers and TAs!

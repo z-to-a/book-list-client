@@ -1,55 +1,61 @@
-header {
+header{
+  background: darkblue;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+nav{
+  background: darkblue;
+}
+
+nav ul{
+  background: darkblue;
+}
+
+nav ul li{
+  background: darkblue;
+}
+
+h1{
+  background: darkblue;
+  padding-top:1vh;
+  padding-left:1vh;
+}
+
+.header-content {
+  display: flex ;
   background: darkblue;
   height: 10vh;
   width: 100%;
-  font-size: 5vh;
+  font-size: 2vh;
   text-align: center;
-  padding: 3vh;
+  padding: 1vh;
 }
-
-
 .icon-menu {
-  background: darkblue;
-  font-size: 3em;
-  float: right;
   position: absolute;
+  background: darkblue;
+  top: 1px;
+  right: 2px;
+  font-size: 1.25em;
 }
 
-.main-nav {
-  padding: 0.1em;
-}
-
-.main-nav ul {
+.icon-menu:after {
   display: none;
-  padding: 0;
-  list-style: none;
-  clear: both;
+  background: darkblue;
 }
 
-.main-nav:hover ul {
+.icon-menu:after:hover + ul {
   display: block;
-}
-
-.main-nav li {
-  margin-right: .4em;
-  font-size: 1.5em;
-  padding: .5em .2em;
   background: darkblue;
 }
 
-nav {
-  font-size: 1.5em;
+
+ul {
+  padding-left: 1vw;
   background: darkblue;
- }
- 
- nav ul {
-  list-style-type: none;
-  padding: 0 4px 0 0;
+}
+
+ul li{
+  margin-left: 2vw;
   background: darkblue;
- }
- 
- nav li {
-  padding: .75em 0 0.75em 4px;
-  border-bottom: 1px solid white;
- }
- 
+}

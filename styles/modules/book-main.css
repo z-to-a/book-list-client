@@ -1,0 +1,23 @@
+ul{
+  background: #0483ff;
+}
+ul li{
+  background: #0483ff;
+}
+
+.about-us {
+  list-style-type: disc;
+  margin-left: 2vw;
+
+}
+
+img {
+  max-width: 50%;
+  max-height: 50%;
+  margin: 1vw;
+}
+
+p{
+  margin-left: 2vw;
+  font-size: 1.25em;
+}

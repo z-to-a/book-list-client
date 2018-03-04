@@ -1,0 +1,12 @@
+label{
+  display: block;
+  align-items: left;
+}
+button{
+  display: inherit;
+  align-items: left;
+  background: #ff8004;
+  color: #29506D;
+  margin-top: 2vh;
+  
+}
